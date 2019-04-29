@@ -1,0 +1,12 @@
+spring:
+  jackson:
+    date-format: yyyy-MM-dd  #如果使用字符串型表示，用这行设置格式
+    timezone: GMT+8
+    serialization:
+      write-dates-as-timestamps: true  #使用数值时间戳表示日期
+
+logging:
+  file: target/app.log
+  level:
+    ROOT: WARN
+    com.example: TRACE
