@@ -1,5 +1,6 @@
-package com.example.rest;
+package com.example.rest.demo;
 
+import com.example.rest.demo.TvSeriesDto;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.commons.io.IOUtils;
@@ -13,8 +14,8 @@ import javax.validation.Valid;
 import java.io.*;
 import java.util.*;
 
-@RestController
-@RequestMapping("/tvseries")
+//@RestController
+//@RequestMapping("/tvseries")
 public class TvSeriesController {
     // 日志
     private static final Log log = LogFactory.getLog(TvSeriesController.class);

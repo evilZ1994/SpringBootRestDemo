@@ -1,8 +1,8 @@
-package com.example.rest;
+package com.example.rest.mybatis.pojo;
 
 import javax.validation.constraints.NotNull;
 
-public class TvCharacterDto {
+public class TvCharacter {
     private Integer id;
     private int tvSeriesId;
     @NotNull private String name;

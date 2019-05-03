@@ -4,9 +4,19 @@ spring:
     timezone: GMT+8
     serialization:
       write-dates-as-timestamps: true  #使用数值时间戳表示日期
+  datasource:
+    dbcp2:
+      validation-query: select 1
+#    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/rest
+    username: root
+    password: cdhzxb2019
 
 logging:
   file: target/app.log
   level:
     ROOT: WARN
     com.example: TRACE
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true

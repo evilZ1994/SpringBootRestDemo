@@ -1,4 +1,4 @@
-package com.example.rest;
+package com.example.rest.mybatis.pojo;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -7,21 +7,21 @@ import javax.validation.constraints.*;
 import java.util.Date;
 import java.util.List;
 
-public class TvSeriesDto {
+public class TvSeries {
     @Null private Integer id;  // 表示客户端可以不传id
     @NotNull private String name;  // 表示客户端必须传名称
     @DecimalMin("1") private int seasonCount;  // 总共多少季
     @Valid @NotNull @Size(min = 2)  // @Valid表示要级联校验；@Size(min = 2)表示这个列表至少要有2项内容，否则不通过校验
-    private List<TvCharacterDto> tvCharacters;
+    private List<TvCharacter> tvCharacters;
     // 设置日期格式化为Json格式
     @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd")
     // @Past表示只接受过去的时间，比当前时间晚的被认为不合格
     @Past private Date originRelease;  // 发行日期
 
-    public TvSeriesDto(){
+    public TvSeries(){
     }
 
-    public TvSeriesDto(int id, String name, int seasonCount, Date originRelease) {
+    public TvSeries(int id, String name, int seasonCount, Date originRelease) {
         this.id = id;
         this.name = name;
         this.seasonCount = seasonCount;
@@ -60,11 +60,11 @@ public class TvSeriesDto {
         this.originRelease = originRelease;
     }
 
-    public List<TvCharacterDto> getTvCharacters() {
+    public List<TvCharacter> getTvCharacters() {
         return tvCharacters;
     }
 
-    public void setTvCharacters(List<TvCharacterDto> tvCharacters) {
+    public void setTvCharacters(List<TvCharacter> tvCharacters) {
         this.tvCharacters = tvCharacters;
     }
 
