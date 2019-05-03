@@ -15,7 +15,7 @@ spring:
 logging:
   file: target/app.log
   level:
-    ROOT: WARN
+    ROOT: INFO
     com.example: TRACE
 mybatis:
   configuration:
